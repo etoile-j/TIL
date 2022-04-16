@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자수 세기, 제한 만들기</title>
+    <style>
+        main {
+            margin: 0 auto;
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            padding: 7px;
+            margin: 0 auto;
+            border-color: silver;
+            border-radius: 7px;
+        }
+
+        textarea:focus {
+            outline: lightpink solid 2px;
+        }
+
+        div {
+            position: relative;
+            display: inline;
+        }
+        p {
+            position: absolute;
+            right: 1px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>글자수가 카운트 되고 제한되는 입력창</h1>
+        <div>
+            <textarea id="input" placeholder="글자를 입력하세요. 50자까지만 가능합니다." onkeydown="count();" ></textarea>
+            <p id="num">(0/50)</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
